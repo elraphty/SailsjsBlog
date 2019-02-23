@@ -22,7 +22,8 @@ module.exports.routes = {
   '/': { view: 'pages/homepage' },
   'GET /articles/list': 'ArticlesController.list',
   'GET /articles/add': 'ArticlesController.add',
-  'POST /articles/create': 'ArticlesController.create'
+  'POST /articles/create': 'ArticlesController.create',
+  'POST /articles/delete/:id': 'ArticlesController.delete',
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *

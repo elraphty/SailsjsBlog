@@ -9,7 +9,7 @@ module.exports = {
   list: async function(req, res) {
     // res.view('list');
     let articles = await Articles.find({});
-    console.log('articles', articles);
+    // console.log('articles', articles);
     //   if(err) {
     //     resizeBy.send(500, {error: 'Database error'});
     //   }
@@ -29,6 +29,18 @@ module.exports = {
       }
       res.redirect('/articles/list');
     });
+  },
+  delete: function(req, res) {
+    let id = req.params.id;
+
+    Articles.destroy({_id: id}).exec(function(err) {
+      if(err) {
+        res.send(500, {error: 'Database error'});
+      }
+      res.redirect('/articles/list');
+    });
+
+    return false;
   }
 };
 
