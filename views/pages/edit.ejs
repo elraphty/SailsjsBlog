@@ -1,0 +1,17 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/articles/list">Articles</a></li>
+  <li class="breadcrumb-item active">Edit</a></li>
+</ol>
+<h2 class="display-4">Edit Article</h2>
+<form method="POST" action="/articles/edit">
+  <input type="hidden" name="id" value="<%= article.id %>">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text"  value="<%= article.title %>" name="title" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="body">Body</label>
+    <textarea name="body" class="form-control"><%= article.body %></textarea>
+  </div>
+  <input type="submit" value="Submit" class="btn btn-primary">
+</form>

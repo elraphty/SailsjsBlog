@@ -24,6 +24,8 @@ module.exports.routes = {
   'GET /articles/add': 'ArticlesController.add',
   'POST /articles/create': 'ArticlesController.create',
   'POST /articles/delete/:id': 'ArticlesController.delete',
+  'GET /articles/edit': 'ArticlesController.edit',
+  'POST /articles/edit': 'ArticlesController.articleEdit',
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
